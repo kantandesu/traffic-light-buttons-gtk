@@ -1,7 +1,3 @@
-Got it 👍 — here’s the adjusted version of your README with the correct folder structure (where `gtk/` is the parent of `gtk-3.0` and `gtk-4.0`):
-
----
-
 # macOS-style Traffic Light Buttons for GNOME
 
 This repository provides **macOS window control buttons** (close, minimize, maximize) as **standalone CSS** for both **GTK 3.0 / GTK 4.0** and **Firefox (applied on a GNOME theme)**.
@@ -125,8 +121,3 @@ Licensed under **GPL-3.0+**.
 
 * [WhiteSur GTK Theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
 * [Firefox GNOME Theme](https://github.com/rafaelmardojai/firefox-gnome-theme)
-
----
-
-Would you like me to also add a **preview screenshot section** (for the macOS buttons on GTK and Firefox) to make the README more visually appealing for GitHub?
-
