@@ -7,8 +7,8 @@ This repository provides **macOS window control buttons** (close, minimize, maxi
 ## Screenshots
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <img src="screenshots/light.png" alt="Light Theme" width="65%" style="min-width: 300px;"/>
-  <img src="screenshots/dark.png" alt="Dark Theme" width="65%" style="min-width: 300px;"/>
+  <img src="screenshots/light.png" alt="Light Theme" width="50%" style="min-width: 300px;"/>
+  <img src="screenshots/dark.png" alt="Dark Theme" width="50%" style="min-width: 300px;"/>
 </div>
 
 ---
