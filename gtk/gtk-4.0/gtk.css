@@ -1,0 +1,345 @@
+/*
+ * WhiteSur Titlebuttons for GTK 4.0
+ * Buttons Only (No Headerbar Styling)
+ * 
+ * Place PNG assets in: windows-assets/
+ * Light theme uses: titlebutton-*.png and titlebutton-*@2.png
+ * Dark theme uses: titlebutton-*-dark.png and titlebutton-*-dark@2.png
+ */
+
+/* ==================== WINDOW CONTROLS / TITLEBUTTONS ==================== */
+
+/* Titlebutton container */
+headerbar windowcontrols {
+  border-spacing: 8px;
+  padding: 0 10px;
+}
+
+headerbar windowcontrols:not(.empty).start:dir(ltr),
+headerbar windowcontrols:not(.empty).end:dir(rtl) {
+  margin-right: 10px;
+}
+
+headerbar windowcontrols:not(.empty).start:dir(rtl),
+headerbar windowcontrols:not(.empty).end:dir(ltr) {
+  margin-left: 10px;
+}
+
+headerbar.titlebar windowcontrols {
+  border-spacing: 8px;
+}
+
+/* Button image transparency */
+headerbar windowcontrols button > image {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: transparent;
+}
+
+/* Base button styles */
+headerbar windowcontrols button.close,
+headerbar windowcontrols button.maximize,
+headerbar windowcontrols button.minimize {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 4px 1px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: transparent;
+}
+
+headerbar windowcontrols button.close:hover,
+headerbar windowcontrols button.close:focus,
+headerbar windowcontrols button.close:active,
+headerbar windowcontrols button.close:backdrop,
+headerbar windowcontrols button.maximize:hover,
+headerbar windowcontrols button.maximize:focus,
+headerbar windowcontrols button.maximize:active,
+headerbar windowcontrols button.maximize:backdrop,
+headerbar windowcontrols button.minimize:hover,
+headerbar windowcontrols button.minimize:focus,
+headerbar windowcontrols button.minimize:active,
+headerbar windowcontrols button.minimize:backdrop {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: transparent;
+}
+
+headerbar windowcontrols button:backdrop {
+  opacity: 1;
+}
+
+/* ==================== LIGHT THEME TITLEBUTTONS ==================== */
+
+/* Close button */
+headerbar windowcontrols button.close {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close.png'),
+                                url('windows-assets/titlebutton-close@2.png'));
+}
+
+headerbar windowcontrols button.close:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-backdrop.png'),
+                                url('windows-assets/titlebutton-close-backdrop@2.png'));
+}
+
+headerbar windowcontrols button.close:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-backdrop-hover.png'),
+                                url('windows-assets/titlebutton-close-backdrop-hover@2.png'));
+}
+
+headerbar windowcontrols button.close:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-hover.png'),
+                                url('windows-assets/titlebutton-close-hover@2.png'));
+}
+
+headerbar windowcontrols button.close:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-active.png'),
+                                url('windows-assets/titlebutton-close-active@2.png'));
+}
+
+/* Maximize button */
+headerbar windowcontrols button.maximize {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize.png'),
+                                url('windows-assets/titlebutton-maximize@2.png'));
+}
+
+headerbar windowcontrols button.maximize:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-backdrop.png'),
+                                url('windows-assets/titlebutton-maximize-backdrop@2.png'));
+}
+
+headerbar windowcontrols button.maximize:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-backdrop-hover.png'),
+                                url('windows-assets/titlebutton-maximize-backdrop-hover@2.png'));
+}
+
+headerbar windowcontrols button.maximize:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-hover.png'),
+                                url('windows-assets/titlebutton-maximize-hover@2.png'));
+}
+
+headerbar windowcontrols button.maximize:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-active.png'),
+                                url('windows-assets/titlebutton-maximize-active@2.png'));
+}
+
+/* Minimize button */
+headerbar windowcontrols button.minimize {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize.png'),
+                                url('windows-assets/titlebutton-minimize@2.png'));
+}
+
+headerbar windowcontrols button.minimize:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-backdrop.png'),
+                                url('windows-assets/titlebutton-minimize-backdrop@2.png'));
+}
+
+headerbar windowcontrols button.minimize:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-backdrop-hover.png'),
+                                url('windows-assets/titlebutton-minimize-backdrop-hover@2.png'));
+}
+
+headerbar windowcontrols button.minimize:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-hover.png'),
+                                url('windows-assets/titlebutton-minimize-hover@2.png'));
+}
+
+headerbar windowcontrols button.minimize:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-active.png'),
+                                url('windows-assets/titlebutton-minimize-active@2.png'));
+}
+
+/* Restore button (when maximized/fullscreen) */
+.fullscreen headerbar windowcontrols button.maximize,
+.maximized headerbar windowcontrols button.maximize {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore.png'),
+                                url('windows-assets/titlebutton-restore@2.png'));
+}
+
+.fullscreen headerbar windowcontrols button.maximize:backdrop,
+.maximized headerbar windowcontrols button.maximize:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-backdrop.png'),
+                                url('windows-assets/titlebutton-restore-backdrop@2.png'));
+}
+
+.fullscreen headerbar windowcontrols button.maximize:backdrop:hover,
+.maximized headerbar windowcontrols button.maximize:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-backdrop-hover.png'),
+                                url('windows-assets/titlebutton-restore-backdrop-hover@2.png'));
+}
+
+.fullscreen headerbar windowcontrols button.maximize:hover,
+.maximized headerbar windowcontrols button.maximize:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-hover.png'),
+                                url('windows-assets/titlebutton-restore-hover@2.png'));
+}
+
+.fullscreen headerbar windowcontrols button.maximize:active,
+.maximized headerbar windowcontrols button.maximize:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-active.png'),
+                                url('windows-assets/titlebutton-restore-active@2.png'));
+}
+
+/* ==================== DARK THEME TITLEBUTTONS ==================== */
+
+/* Close button - Dark */
+.dark headerbar windowcontrols button.close,
+headerbar.dark windowcontrols button.close {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-dark.png'),
+                                url('windows-assets/titlebutton-close-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.close:backdrop,
+headerbar.dark windowcontrols button.close:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-backdrop-dark.png'),
+                                url('windows-assets/titlebutton-close-backdrop-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.close:backdrop:hover,
+headerbar.dark windowcontrols button.close:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-backdrop-hover-dark.png'),
+                                url('windows-assets/titlebutton-close-backdrop-hover-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.close:hover,
+headerbar.dark windowcontrols button.close:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-hover-dark.png'),
+                                url('windows-assets/titlebutton-close-hover-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.close:active,
+headerbar.dark windowcontrols button.close:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-close-active-dark.png'),
+                                url('windows-assets/titlebutton-close-active-dark@2.png'));
+}
+
+/* Maximize button - Dark */
+.dark headerbar windowcontrols button.maximize,
+headerbar.dark windowcontrols button.maximize {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-dark.png'),
+                                url('windows-assets/titlebutton-maximize-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.maximize:backdrop,
+headerbar.dark windowcontrols button.maximize:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-backdrop-dark.png'),
+                                url('windows-assets/titlebutton-maximize-backdrop-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.maximize:backdrop:hover,
+headerbar.dark windowcontrols button.maximize:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-backdrop-hover-dark.png'),
+                                url('windows-assets/titlebutton-maximize-backdrop-hover-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.maximize:hover,
+headerbar.dark windowcontrols button.maximize:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-hover-dark.png'),
+                                url('windows-assets/titlebutton-maximize-hover-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.maximize:active,
+headerbar.dark windowcontrols button.maximize:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-maximize-active-dark.png'),
+                                url('windows-assets/titlebutton-maximize-active-dark@2.png'));
+}
+
+/* Minimize button - Dark */
+.dark headerbar windowcontrols button.minimize,
+headerbar.dark windowcontrols button.minimize {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-dark.png'),
+                                url('windows-assets/titlebutton-minimize-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.minimize:backdrop,
+headerbar.dark windowcontrols button.minimize:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-backdrop-dark.png'),
+                                url('windows-assets/titlebutton-minimize-backdrop-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.minimize:backdrop:hover,
+headerbar.dark windowcontrols button.minimize:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-backdrop-hover-dark.png'),
+                                url('windows-assets/titlebutton-minimize-backdrop-hover-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.minimize:hover,
+headerbar.dark windowcontrols button.minimize:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-hover-dark.png'),
+                                url('windows-assets/titlebutton-minimize-hover-dark@2.png'));
+}
+
+.dark headerbar windowcontrols button.minimize:active,
+headerbar.dark windowcontrols button.minimize:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-minimize-active-dark.png'),
+                                url('windows-assets/titlebutton-minimize-active-dark@2.png'));
+}
+
+/* Restore button (when maximized/fullscreen) - Dark */
+.dark.fullscreen headerbar windowcontrols button.maximize,
+.dark.maximized headerbar windowcontrols button.maximize,
+.fullscreen headerbar.dark windowcontrols button.maximize,
+.maximized headerbar.dark windowcontrols button.maximize {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-dark.png'),
+                                url('windows-assets/titlebutton-restore-dark@2.png'));
+}
+
+.dark.fullscreen headerbar windowcontrols button.maximize:backdrop,
+.dark.maximized headerbar windowcontrols button.maximize:backdrop,
+.fullscreen headerbar.dark windowcontrols button.maximize:backdrop,
+.maximized headerbar.dark windowcontrols button.maximize:backdrop {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-backdrop-dark.png'),
+                                url('windows-assets/titlebutton-restore-backdrop-dark@2.png'));
+}
+
+.dark.fullscreen headerbar windowcontrols button.maximize:backdrop:hover,
+.dark.maximized headerbar windowcontrols button.maximize:backdrop:hover,
+.fullscreen headerbar.dark windowcontrols button.maximize:backdrop:hover,
+.maximized headerbar.dark windowcontrols button.maximize:backdrop:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-backdrop-hover-dark.png'),
+                                url('windows-assets/titlebutton-restore-backdrop-hover-dark@2.png'));
+}
+
+.dark.fullscreen headerbar windowcontrols button.maximize:hover,
+.dark.maximized headerbar windowcontrols button.maximize:hover,
+.fullscreen headerbar.dark windowcontrols button.maximize:hover,
+.maximized headerbar.dark windowcontrols button.maximize:hover {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-hover-dark.png'),
+                                url('windows-assets/titlebutton-restore-hover-dark@2.png'));
+}
+
+.dark.fullscreen headerbar windowcontrols button.maximize:active,
+.dark.maximized headerbar windowcontrols button.maximize:active,
+.fullscreen headerbar.dark windowcontrols button.maximize:active,
+.maximized headerbar.dark windowcontrols button.maximize:active {
+  background-image: -gtk-scaled(url('windows-assets/titlebutton-restore-active-dark.png'),
+                                url('windows-assets/titlebutton-restore-active-dark@2.png'));
+}
+
+/* ==================== DEFAULT DECORATION ==================== */
+
+headerbar.default-decoration windowcontrols button,
+headerbar.default-decoration windowcontrols menubutton {
+  border: none;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+headerbar.default-decoration windowcontrols button.close,
+headerbar.default-decoration windowcontrols button.maximize,
+headerbar.default-decoration windowcontrols button.minimize {
+  min-width: 16px;
+  min-height: 16px;
+  margin: 0 1px;
+  padding: 0;
+}
+

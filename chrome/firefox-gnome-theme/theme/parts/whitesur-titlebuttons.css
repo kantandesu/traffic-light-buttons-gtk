@@ -1,0 +1,253 @@
+/*
+ * WhiteSur Traffic Light Titlebuttons for Firefox
+ * Adapted from WhiteSur GTK Theme titlebuttons
+ * 
+ * This overrides the default GNOME circular buttons with macOS-style traffic lights
+ */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ==================== TITLEBUTTONS BASE STYLING ==================== */
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button {
+  /* Don't use background shorthand as it will clear background-image set below */
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px 16px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  padding: 0 !important;
+  margin: 0 1px !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button:hover,
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button:focus,
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button:active {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button > .toolbarbutton-icon {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button::-moz-window-inactive {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* ==================== LIGHT THEME TITLEBUTTONS ==================== */
+
+/* Close button */
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-close {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-close::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-backdrop.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-close:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-close:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-backdrop-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-close:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-active.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* Maximize button */
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-max {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-max::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-backdrop.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-max:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-max:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-backdrop-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-max:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-active.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* Minimize button */
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-min {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-min::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-backdrop.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-min:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-min:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-backdrop-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-min:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-active.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* Restore button (when maximized) */
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-restore {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-restore::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-backdrop.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-restore:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-restore:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-backdrop-hover.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-button.titlebar-restore:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-active.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* ==================== DARK THEME TITLEBUTTONS ==================== */
+
+/* Close button - Dark */
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-close,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-close {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-close::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-close::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-backdrop-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-close:hover,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-close:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-close:hover::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-close:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-backdrop-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-close:active,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-close:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-close-active-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* Maximize button - Dark */
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-max,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-max {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-max::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-max::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-backdrop-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-max:hover,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-max:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-max:hover::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-max:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-backdrop-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-max:active,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-max:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-maximize-active-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* Minimize button - Dark */
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-min,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-min {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-min::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-min::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-backdrop-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-min:hover,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-min:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-min:hover::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-min:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-backdrop-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-min:active,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-min:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-minimize-active-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* Restore button (when maximized) - Dark */
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-restore,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-restore {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-restore::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-restore::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-backdrop-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-restore:hover,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-restore:hover {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-restore:hover::-moz-window-inactive,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-restore:hover::-moz-window-inactive {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-backdrop-hover-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]):-moz-lwtheme-darktext .titlebar-button.titlebar-restore:active,
+:root[customtitlebar]:not([inFullscreen])[lwt-toolbar-field-brighttext] .titlebar-button.titlebar-restore:active {
+  background: url('../../../whitesur-titlebuttons/windows-assets/titlebutton-restore-active-dark.png') center/16px 16px no-repeat transparent !important;
+}
+
+/* ==================== ADJUST BUTTON SPACING ==================== */
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-buttonbox-container {
+  padding: 0 10px !important;
+}
+
+:root[customtitlebar]:not([inFullscreen]) .titlebar-buttonbox {
+  gap: 8px !important;
+}
+
