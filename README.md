@@ -4,7 +4,7 @@ This repository provides **macOS window control buttons** (close, minimize, maxi
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 .
