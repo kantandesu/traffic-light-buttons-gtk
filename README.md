@@ -1,8 +1,3 @@
-Perfect — here’s your final **README.md** version with **responsive side-by-side screenshots** (side-by-side on desktop, stacked on mobile).
-It uses lightweight, GitHub-compatible HTML for layout and scales nicely at any screen size:
-
----
-
 # macOS-style Traffic Light Buttons for GNOME
 
 This repository provides **macOS window control buttons** (close, minimize, maximize) as **standalone CSS** for both **GTK 3.0 / GTK 4.0** and **Firefox (applied on a GNOME theme)**.
@@ -12,8 +7,8 @@ This repository provides **macOS window control buttons** (close, minimize, maxi
 ## Screenshots
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <img src="screenshots/light.png" alt="Light Theme" width="45%" style="min-width: 300px;"/>
-  <img src="screenshots/dark.png" alt="Dark Theme" width="45%" style="min-width: 300px;"/>
+  <img src="screenshots/light.png" alt="Light Theme" width="65%" style="min-width: 300px;"/>
+  <img src="screenshots/dark.png" alt="Dark Theme" width="65%" style="min-width: 300px;"/>
 </div>
 
 ---
@@ -135,14 +130,3 @@ Licensed under **GPL-3.0+**.
 
 * [WhiteSur GTK Theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
 * [Firefox GNOME Theme](https://github.com/rafaelmardojai/firefox-gnome-theme)
-
----
-
-✅ **Ready for GitHub:**
-
-* Screenshots align side-by-side on wide screens.
-* They automatically stack on mobile.
-* No external CSS or scripts needed.
-
-Would you like me to also add a short “Preview” section above the screenshots (a one-line caption like *“Example window control styles in light and dark mode”*)? It can make the README look a bit more polished.
-
